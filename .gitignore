@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Python tooling
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# Data
+*.mp4
+*.avi
+*.jpg
+*.png
+*.yaml
