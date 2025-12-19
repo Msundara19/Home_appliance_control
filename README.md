@@ -13,40 +13,17 @@ Real-time hand gesture recognition to control home appliances using MediaPipe + 
 | P95 Latency | 48ms |
 | P99 Latency | 49ms |
 
-Run `python benchmark.py` to reproduce results locally.
+Run `python benchmark.py` to reproduce.
 
-## Features
-- Real-time hand/palm landmark detection using MediaPipe + OpenCV
-- Simple gesture → action mapping (1-5 fingers)
-- HTTP client on Raspberry Pi with `/on` and `/off` endpoints
-- Simulation mode for testing without hardware
+## Gesture Mapping
 
-## Architecture
-```
-+------------------+          HTTP          +-------------------+
-|  Hand Gesture    |  ──────────────►      |  Raspberry Pi     |
-|  Server (PC)     |                        |  GPIO Client      |
-|  OpenCV+MediaPipe|  ◄──────────────       |  Flask / GPIO 18  |
-+------------------+    responses           +-------------------+
-```
+- 1 finger = OFF
+- 2 fingers = ON
+- 3 fingers = VOL+
+- 4 fingers = VOL-
 
 ## Quick Start
 ```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Create config
-cp src/common/config.example.yaml src/common/config.yaml
-
-# Run benchmark
 python benchmark.py
-
-# Run gesture server (needs webcam)
-python -m src.server.hand_gesture_server
 ```
-
-## Gesture Mapping
-- **1 finger** → OFF
-- **2 fingers** → ON
-- **3 fingers** → VOL+
-- **4 fingers** → VOL-

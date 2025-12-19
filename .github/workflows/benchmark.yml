@@ -21,13 +21,10 @@ jobs:
       
       - name: Create config
         run: |
-          cat > src/common/config.yaml << 'CONFIG'
-          camera_index: 0
-          raspi_base_url: "http://127.0.0.1:8081"
-          simulation_mode: true
-          request_timeout_sec: 2.5
-          draw_debug_text: true
-          CONFIG
+          mkdir -p src/common
+          echo "camera_index: 0" > src/common/config.yaml
+          echo "raspi_base_url: http://127.0.0.1:8081" >> src/common/config.yaml
+          echo "simulation_mode: true" >> src/common/config.yaml
       
       - name: Run benchmark
         run: python benchmark.py
