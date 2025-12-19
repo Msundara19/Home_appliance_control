@@ -101,3 +101,15 @@ home-appliance-gesture-iot/
 - **Black window / no camera**: try changing `camera_index` to `0` or `1`.
 - **Landmarks not detected**: ensure good lighting; keep the hand 0.3–1.0m from camera.
 - **HTTP errors**: check that the Pi IP is reachable; try `curl http://<pi-ip>:8081/on -X POST`.
+## Performance Benchmarks
+
+![Benchmark](https://github.com/Msundara19/Home_appliance_control/actions/workflows/benchmark.yml/badge.svg)
+
+| Metric | Value |
+|--------|-------|
+| Gesture Recognition Accuracy | 100% |
+| Average Latency | 33ms |
+| P95 Latency | 48ms |
+| P99 Latency | 49ms |
+
+Run `python benchmark.py` to reproduce results locally.

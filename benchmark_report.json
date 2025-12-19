@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-12-19T03:31:21.892995",
+  "timestamp": "2025-12-19T03:41:01.057490",
   "finger_counting": {
     "accuracy_percent": 100.0,
-    "total_tests": 821,
-    "correct_detections": 821,
+    "total_tests": 831,
+    "correct_detections": 831,
     "latency_ms": {
       "total": {
         "avg": 0,
@@ -71,88 +71,50 @@
       "action_mapping": {
         "avg": 0.0,
         "min": 0.0,
-        "max": 0.01,
+        "max": 0.0,
         "p50": 0.0,
         "p95": 0.0,
         "p99": 0.0
       }
     }
   },
-  "mediapipe_detection": {
-    "accuracy_percent": 0,
-    "total_tests": 0,
-    "correct_detections": 0,
-    "latency_ms": {
-      "total": {
-        "avg": 0,
-        "min": 0,
-        "max": 0,
-        "p50": 0,
-        "p95": 0,
-        "p99": 0
-      },
-      "detection": {
-        "avg": 20.09,
-        "min": 17.19,
-        "max": 88.89,
-        "p50": 18.15,
-        "p95": 24.99,
-        "p99": 58.4
-      },
-      "finger_counting": {
-        "avg": 0,
-        "min": 0,
-        "max": 0,
-        "p50": 0,
-        "p95": 0,
-        "p99": 0
-      },
-      "action_mapping": {
-        "avg": 0,
-        "min": 0,
-        "max": 0,
-        "p50": 0,
-        "p95": 0,
-        "p99": 0
-      }
-    }
-  },
+  "mediapipe_detection": null,
   "end_to_end": {
     "accuracy_percent": 100.0,
     "total_tests": 500,
     "correct_detections": 500,
     "latency_ms": {
       "total": {
-        "avg": 33.11,
-        "min": 15.56,
-        "max": 50.61,
-        "p50": 33.37,
-        "p95": 48.43,
-        "p99": 50.42
+        "avg": 32.78,
+        "min": 15.08,
+        "max": 50.04,
+        "p50": 32.58,
+        "p95": 48.49,
+        "p99": 49.49
       },
       "detection": {
-        "avg": 33.09,
-        "min": 15.55,
-        "max": 50.6,
-        "p50": 33.36,
-        "p95": 48.41,
-        "p99": 50.4
+        "avg": 32.77,
+        "min": 15.07,
+        "max": 50.04,
+        "p50": 32.56,
+        "p95": 48.48,
+        "p99": 49.49
       },
       "finger_counting": {
         "avg": 0.01,
-        "min": 0.01,
-        "max": 0.04,
+        "min": 0.0,
+        "max": 0.05,
         "p50": 0.01,
-        "p95": 0.02,
+        "p95": 0.01,
         "p99": 0.02
       },
       "action_mapping": {
         "avg": 0.0,
         "min": 0.0,
-        "max": 0.02,
+        "max": 0.01,
         "p50": 0.0,
         "p95": 0.0,
-        "p99": 0.01
+        "p99": 0.0
       }
     }
   }

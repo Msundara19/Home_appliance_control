@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 # Test if MediaPipe works
 try:
     import mediapipe as mp
-    MEDIAPIPE_AVAILABLE = True
+    MEDIAPIPE_AVAILABLE = False
 except ImportError:
     MEDIAPIPE_AVAILABLE = False
     print("⚠️  MediaPipe not installed, using simulated detection times")

@@ -1,0 +1,38 @@
+name: Benchmark
+
+on: [push, pull_request]
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt numpy
+          sudo apt-get update && sudo apt-get install -y libgl1-mesa-glx
+      
+      - name: Create config
+        run: |
+          cat > src/common/config.yaml << 'CONFIG'
+          camera_index: 0
+          raspi_base_url: "http://127.0.0.1:8081"
+          simulation_mode: true
+          request_timeout_sec: 2.5
+          draw_debug_text: true
+          CONFIG
+      
+      - name: Run benchmark
+        run: python benchmark.py
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: benchmark_report.json
